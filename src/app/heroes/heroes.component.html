@@ -1,0 +1,23 @@
+<div class="text-center">
+    <h2 class="mt-5">Meus Heróis</h2>
+    <div class="row">
+        <div *ngFor="let hero of heroes" class="my-4 col-4">
+            <a mdbBtn size="sm" type="button" gradient="peach"  mdbWavesEffect routerLink="/detail/{{hero.id}}">
+                {{hero.id}} - {{hero.name}}
+            </a>
+            <br>
+            <button mdbBtn class="btn btn-danger px-2" size="sm"  mdbWavesEffect title="delete hero" (click)="delete(hero)"><mdb-icon fas icon="times"></mdb-icon> </button>
+        </div>
+    </div>
+    
+</div>
+
+<div class="text-center md-form my-5">
+    <label id="new-hero">Nome do novo herói: </label>
+    <input class="form-control" type="text"mdbInput for="new-hero" #heroName />
+  
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="btn btn-success mt-5 " (click)="add(heroName.value); heroName.value=''">
+      Adicionar Herói
+    </button>
+  </div>

@@ -1,0 +1,18 @@
+
+<div class="md-form ">
+    <label class="" for="hero-name">Procure o Herói desejado: </label>  
+    <input mdbInput class="form-control" type="text" #searchBox id="search-box" (input)="search(searchBox.value)" class="form-control mr-sm-2" type="text" >
+</div>
+
+
+
+<div class="row  text-center">
+    <div class="col-md-6" *ngFor="let hero of heroes$ | async">
+        <a mdbBtn size="md  " gradient="aqua"  mdbWavesEffect routerLink="/detail/{{hero.id}}">
+            {{hero.name}}
+        </a>
+    </div>
+</div>
+
+
+

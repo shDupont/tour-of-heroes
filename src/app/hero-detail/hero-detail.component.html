@@ -1,0 +1,11 @@
+<div class="mt-5 text-center" *ngIf="hero">
+  <h2 class="bold">Detalhes de {{hero.name | titlecase}} </h2>
+  <p> <strong class="bold">ID:</strong>{{hero.id}}</p>
+  <div class="md-form ">
+    <input mdbInput class="form-control" type="text"id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+    <label class="" for="hero-name">Nome do Herói: </label> 
+  </div>
+  <button class="btn btn-success mr-5" (click)="save()">Salvar</button>
+  
+  <button class="btn btn-warning" (click)="goBack()">Voltar</button>
+</div>

@@ -1,0 +1,9 @@
+<div class="text-center">
+  <h2 class="mt-5 ">Top de Heróis</h2>
+  <div class=" row">
+    <div class="col-md-4 my-4" *ngFor="let hero of heroes; index as i">
+      <a mdbBtn size="md" gradient="peach"  mdbWavesEffect routerLink="/detail/{{hero.id}}">{{hero.name | titlecase}}</a>
+    </div>
+  </div>
+</div>
+
